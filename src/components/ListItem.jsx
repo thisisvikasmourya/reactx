@@ -6,10 +6,24 @@ import ListItemText from "@mui/material/ListItemText";
 import ListItemAvatar from "@mui/material/ListItemAvatar";
 import Avatar from "@mui/material/Avatar";
 import Typography from "@mui/material/Typography";
+import ListSubheader from "@mui/material/ListSubheader";
+import Box from "@mui/material/Box";
 
 export default function ListItems() {
   return (
-    <List sx={{ width: "100%", bgcolor: "background.paper" }}>
+    <List
+      sx={{ width: "100%", bgcolor: "background.paper" }}
+      subheader={
+        <Box sx={{ display: "flex", justifyContent: "space-between" }}>
+          <ListSubheader component="div" id="nested-list-subheader">
+            Nested List Items
+          </ListSubheader>
+          <ListSubheader component="div" id="nested-list-subheader">
+            Nested List Items
+          </ListSubheader>
+        </Box>
+      }
+    >
       <ListItem alignItems="flex-start">
         <ListItemAvatar>
           <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
